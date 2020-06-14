@@ -1,10 +1,12 @@
+// Electron Module
 const electron = require('electron');
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
-var win;
 
+var win;
+// create window
 function create()
 {
     var appConfig =
@@ -14,7 +16,7 @@ function create()
 		x: 0,
 		y: 0,
 		darkTheme: true,
-        fullscreen: false,
+        fullscreen: true,
 		webPreferences: {
 			nodeIntegration: false,
 		},
@@ -23,8 +25,10 @@ function create()
 
     // Create the browser window.
     win = new BrowserWindow(appConfig);
+    win.removeMenu(); // remove menu (File, Edit, etc.)
 
-    win.loadFile('index.html');
+    win.loadURL('http://localhost:5000');
+    //win.loadFile('index.html');
 }
 
 app.on('ready', create);
