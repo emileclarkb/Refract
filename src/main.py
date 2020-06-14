@@ -35,9 +35,7 @@ def portrait():
             imgs.append(file)
 
     # select random image
-    img = random.choice(imgs)
-
-    return render("portrait.html", img=)
+    return render("portrait.html", img=random.choice(imgs))
 
 # loading page
 @app.route('/loading')
