@@ -1,3 +1,26 @@
 body {
+
     background: #000000;
+}
+
+
+
+
+
+/* Aileron Font Family */
+@font-face {
+    font-family: Aileron;
+    src: url('Aileron-Thin.otf');
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url('Aileron-ThinItalic.otf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url('Aileron-Bold.otf');
+    font-style: bold;
 }
