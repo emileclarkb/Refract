@@ -1,40 +1,21 @@
-import pyttsx3
-import speech_recognition as sr
-
-
-# text to speech
-def speak(text):
-    engine = pyttsx3.init()
-    engine.say(text)
-    engine.runAndWait()
-
-# speech to text
-def get_audio():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        audio = r.listen(source)
-        text = ""
-
-        try:
-            text = r.recognize_google(audio)
-        except Exception as e:
-            print("Exception: " + str(e))
-
-    return text.lower()
-
-
-
-
+# ASSETS
+from kara import Kara
 
 def main():
-    wake = ['kara', 'cara', 'kawa']
+    # instance kara
+    kara = Kara()
 
     while True:
-        text = get_audio()
+        text = kara.listen()
 
-        for word in wake:
+        for word in kara.wake:
+            # wake word detected in text
             if word in text:
-                text = get_audio()
+                # speak result of input
+                kara.speak(kara.compile(text))
+
+                # exit for loop
+                break
 
 
 if __name__ == '__main__':

@@ -3,3 +3,7 @@ pyttsx3
 pywin32
 pyaudio
 wheel
+
+# pyttsx3 requirements for saving to file (linux)
+espeak
+ffmpeg
