@@ -1,0 +1,35 @@
+body {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background: #ff0000;
+}
+
+#message {
+    text-align: center
+}
+
+#portrait {
+    margin: 0;
+    width: 100%;
+}
+
+
+
+/* Aileron Font Family */
+@font-face {
+    font-family: Aileron;
+    src: url('../../Fonts/Aileron-Thin.otf');
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url('../../Fonts/Aileron-ThinItalic.otf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url('../../Fonts/Aileron-Bold.otf');
+    font-style: bold;
+}
