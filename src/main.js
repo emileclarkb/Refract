@@ -27,8 +27,11 @@ function create()
     win = new BrowserWindow(appConfig);
     win.removeMenu(); // remove menu (File, Edit, etc.)
 
-    win.loadURL('http://localhost:5000');
-    //win.loadFile('index.html');
+    
+
+    // Flask
+    //win.loadURL('http://localhost:5000');
+    //const ses = win.webContents.session.clearCache();
 }
 
 app.on('ready', create);
